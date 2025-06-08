@@ -95,6 +95,25 @@ Each prediction is saved to `prediction_log.csv` with timestamp, amount, label, 
 
 ---
 
+## 🤖 Model Details
+
+The machine learning model used in this project is a **Random Forest Classifier**, trained using `scikit-learn`.
+
+### 🎯 Features Used:
+- `amount`: Transaction amount (float)
+
+### 📊 Model Info:
+- Algorithm: RandomForestClassifier
+- Training Data: `sample_data.csv` (manually labeled)
+- Target: `is_fraud` (1 = Fraud, 0 = Legit)
+
+### 🧠 Behavior:
+- The model learns that **very large transactions** are more likely to be fraudulent.
+- It outputs both a **binary prediction** (fraud/legit) and a **probability score**.
+
+### 📂 Output:
+- A file named `fraud_model.pkl` is generated and used by the Streamlit app for real-time predictions.
+
 ## Contact
 
 Created by [Reetesh Nigam](https://github.com/nigamreetesh84)
