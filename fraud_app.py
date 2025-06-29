@@ -16,7 +16,7 @@ st.markdown("Use this tool to detect potentially fraudulent transactions based o
 # Input
 amount = st.number_input("Enter Transaction Amount", min_value=0.0, step=0.01)
 
-# Prediction
+# Prediction model
 if st.button("Check for Fraud"):
     prediction = model.predict([[amount]])[0]
     probability = model.predict_proba([[amount]])[0][1]  # probability of fraud
